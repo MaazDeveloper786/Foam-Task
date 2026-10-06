@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Login Form</title>
+    <style>
+        body {
+            font-family: "MS Sans Serif", Arial, sans-serif;
+            background-color: #ece9d8;
+            color: #000;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        .form-container {
+            background-color: #ece9d8;
+            border: 1px solid #999;
+            padding: 15px;
+            width: 380px;
+            box-shadow: inset 1px 1px #fff, inset -1px -1px #dfd9c3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 4px 2px;
+            vertical-align: middle;
+        }
+
+        .label-col {
+            width: 38%;
+            text-align: left;
+            vertical-align: top;
+            padding-top: 6px;
+        }
+
+        .input-col {
+            width: 62%;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 2px 4px;
+            border: 1px solid #7f9db9;
+            background-color: #fff;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        select {
+            height: 22px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: block;
+            margin-bottom: 3px;
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        .button-row {
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .btn {
+            background-color: #f0f0f0;
+            border: 1px solid #003c74;
+            padding: 3px 16px;
+            margin: 0 5px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 2px;
+            box-shadow: inset 0 1px 0 #fff, 0 1px 1px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background-color: #e5f1fb;
+            border-color: #0078d7;
+        }
+
+        .btn:active {
+            background-color: #cce4f7;
+            border-color: #005499;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td class="label-col"><label for="username">Username:</label></td>
+                    <td class="input-col"><input type="text" id="username" name="username"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="password">Password:</label></td>
+                    <td class="input-col"><input type="password" id="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="city">City of<br>Employment:</label></td>
+                    <td class="input-col" style="vertical-align: middle;"><input type="text" id="city" name="city"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="webserver">Web server:</label></td>
+                    <td class="input-col">
+                        <select id="webserver" name="webserver">
+                            <option value="" selected>&mdash; Choose a server &mdash;</option>
+                            <option value="server1">Server 1 (Primary)</option>
+                            <option value="server2">Server 2 (Backup)</option>
+                            <option value="server3">Server 3 (Cloud)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label>Please specify<br>your role:</label></td>
+                    <td class="input-col">
+                        <div class="radio-group">
+                            <label><input type="radio" name="role" value="Admin"> Admin</label>
+                            <label><input type="radio" name="role" value="Engineer"> Engineer</label>
+                            <label><input type="radio" name="role" value="Manager"> Manager</label>
+                            <label><input type="radio" name="role" value="Guest"> Guest</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label>Single Sign-on<br>to the following:</label></td>
+                    <td class="input-col">
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="sso" value="Mail"> Mail</label>
+                            <label><input type="checkbox" name="sso" value="Payroll"> Payroll</label>
+                            <label><input type="checkbox" name="sso" value="Self-service"> Self-service</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="button-row">
+                <button type="submit" class="btn">Login</button>
+                <button type="reset" class="btn">Reset</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
